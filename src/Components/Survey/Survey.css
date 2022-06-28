@@ -1,0 +1,22 @@
+.home {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 30px;
+    left: 30px;
+    border: 1px solid rgb(156, 156, 156);
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width: 390px),
+(max-height: 844px) {
+
+    .home {
+        top: 20px;
+        right: 20px;
+        left: 30px;
+        border: 1px solid rgb(156, 156, 156);
+        border-radius: 10px;
+    }
+}
