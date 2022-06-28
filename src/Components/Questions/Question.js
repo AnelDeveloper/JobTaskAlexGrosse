@@ -5,10 +5,13 @@ import "./Question.css";
 import { CheckBoxInput } from "./CheckBoxInput";
 import { SelectInput } from "./SelectInput";
 
+import { QUESTIONS } from "../../data";
+
 
 import ProgressBarComp from "../ProgresBar/Progres";
 
 const Question = ({
+  currentIndex,
   currentQuestion,
   onNextQuestion,
   onBackQuestion,
@@ -19,12 +22,31 @@ const Question = ({
 
   const { answerType } = currentQuestion;
 
-  const handleNext = () => {
-    onNextQuestion(answer, score);
+  const [precentage, setPrecenetage] = useState(10)
 
+
+
+  console.log(currentQuestion.length)
+
+
+  const handleNext = () => {
+    onNextQuestion(answer, score, precentage);
     setAnswer();
     setScore(0);
+    setPrecenetage(precentage + 30)
+
   };
+
+
+
+
+
+
+
+
+
+
+
 
   return (
     <>
@@ -37,7 +59,9 @@ const Question = ({
         <div className="title">{currentQuestion.title}</div>
 
         {answerType === "freeText" && (
-          <FreeTextInput answer={answer} setAnswer={setAnswer} />
+          <FreeTextInput
+            answer={answer}
+            setAnswer={setAnswer} />
         )}
         {answerType === "radio" && (
           <RadioInput
@@ -77,12 +101,23 @@ const Question = ({
             NEXT &rarr;
           </button>
         </div>
-        <div className="ProgresBar">
-          <ProgressBarComp />
-        </div>
+
 
       </div>
 
+
+      {currentIndex > 0 &&
+
+
+        <div className="footer">
+          <div className="ProgresBar">
+            <div className="currentQuestion">{currentQuestion.heading} OUT OF {QUESTIONS.length - 1}</div>
+
+            <ProgressBarComp precentage={precentage} />
+          </div>
+        </div>
+
+      }
     </>
 
   );

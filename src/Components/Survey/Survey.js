@@ -62,14 +62,18 @@ const Survey = () => {
 
       {quizState === "started" && (
         <Question
+          currentIndex={currentIndex}
           currentQuestion={currentQuestion}
           onNextQuestion={onNextQuestion}
           onBackQuestion={onBackQuestion}
           userName={userName}
         />
+
       )}
 
       {quizState === "finished" && <Score userName={userName} getNewSurvey={getNewSurvey} totalScore={getTotalScore()} />}
+
+
     </div>
   );
 };

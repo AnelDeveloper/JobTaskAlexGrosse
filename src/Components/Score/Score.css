@@ -16,6 +16,12 @@
 
 }
 
+.progresFinish {
+    width: 50%;
+}
+
+
+
 .points {
     display: flex;
     justify-content: center;

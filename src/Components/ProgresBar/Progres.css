@@ -1,5 +1,6 @@
 .progres {
-    width: 100%;
+    width: 90%;
+
 
 }
 
@@ -9,7 +10,6 @@
 .progressBar {
     display: flex;
     position: relative;
-    width: 100%;
     height: 12px;
     border-radius: 40px;
     background-color: rgb(0, 0, 0);
@@ -20,7 +20,40 @@
 .barStatus {
     border-radius: 40px;
     position: absolute;
-    width: 30%;
     height: 100%;
     background-color: rgb(255, 255, 255);
+}
+
+
+@media screen and (max-width: 395px),
+(max-height: 847px) {
+
+    .progres {
+        width: 90%;
+
+
+    }
+
+
+
+    .progressBar {
+        display: flex;
+        position: relative;
+        height: 12px;
+        border-radius: 40px;
+        background-color: rgb(0, 0, 0);
+        border: 1px solid white;
+
+
+    }
+
+    .barStatus {
+        border-radius: 40px;
+        position: absolute;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+    }
+
+
+
 }

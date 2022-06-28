@@ -5,7 +5,7 @@ export const QUESTIONS = [
     answerType: "freeText",
   },
   {
-    heading: "Question 1",
+    heading: "QUESTION 1",
     title: "How often do you visit?",
     answerType: "radio",
     answers: [
@@ -15,7 +15,7 @@ export const QUESTIONS = [
     ],
   },
   {
-    heading: "Question 2",
+    heading: "QUESTION 2",
     title: "Pls select at least one?",
     answerType: "checkbox",
     answers: [
@@ -25,7 +25,7 @@ export const QUESTIONS = [
     ],
   },
   {
-    heading: "Question 3",
+    heading: "QUESTION 3",
     title: "Where are you from?",
     answerType: "select",
     answers: [
